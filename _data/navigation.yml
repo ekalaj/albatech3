@@ -1,0 +1,28 @@
+- name: Pricing
+  link: /pricing/
+  new_window: false
+  highlight: false
+- name: About
+  link: /about/
+  new_window: false
+  highlight: false
+- name: Case Studies
+  link: /projects
+  new_window: true
+  highlight: false
+  - name: Contact
+  link: /contact/
+  new_window: false
+  highlight: false
+  - name: Blog
+  link: /blog/
+  new_window: false
+  highlight: false
+- name: Free Audit
+  link: /audit/
+  new_window: true
+  highlight: true
+  - name: Pricing
+  link: /pricing/
+  new_window: false
+  highlight: false
