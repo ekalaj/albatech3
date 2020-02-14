@@ -1,0 +1,1000 @@
+/*====================================
+            Menu Part Start
+======================================*/
+
+.menu_main {
+    width: 100%;
+    padding: 40px 0;
+
+    .nav_menu {
+        ul {
+            .active {
+                color: $t-color !important;
+            }
+
+            li {
+                margin: 0 15px;
+                line-height: 60px;
+
+                a {
+                    font-size: 16px;
+                    color: #999999;
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    @extend %trans;
+
+                    &:hover {
+                        color: $t-color;
+                        position: relative;
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            bottom: 7px;
+                            background: $br-color;
+                            left: 0;
+                            width: 40%;
+                            height: 4px;
+                        }
+                    }
+                }
+
+                a[class="nav-link menu_btn p-0"] {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    color: #fff;
+                    padding: 10px 35px !important;
+                    line-height: 30px;
+                    text-align: center;
+                    border-radius: 60px;
+                    @extend %g-color;
+                    margin-top: 6px;
+                    @extend %b-s;
+                    font-family: "Montserrat", sans-serif;
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        bottom: 7px;
+                        background: $br-color;
+                        left: 0;
+                        width: 0%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*====================================
+            Menu Part End
+======================================*/
+/*====================================
+            Banner Part Start
+======================================*/
+
+#banner_main {
+    padding: 80px 0;
+    position: relative;
+
+    .slick-dots {
+        display: flex;
+        position: absolute;
+        bottom: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .slick-active {
+            button {
+                @extend %g-color;
+            }
+        }
+
+        li {
+            button {
+                font-size: 0;
+                width: 40px;
+                height: 10px;
+                border-radius: 20px;
+                margin: 0 8px;
+                border: 2px solid $br-color;
+                background: transparent;
+
+                &:focus {
+                    outline: 0;
+                }
+            }
+        }
+    }
+}
+
+.banner_text {
+    margin-top: 120px;
+
+    h2 {
+        font-size: 50px;
+        color: $t-color;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+
+    h1 {
+        font-size: 50px;
+        color: $br-color;
+        text-transform: capitalize;
+        font-weight: 800;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: #f8f8fa;
+            top: -179px;
+            left: -375px;
+            z-index: -1;
+        }
+    }
+
+    h3 {
+        font-size: 20px;
+        color: $t-color;
+        text-transform: capitalize;
+        padding-bottom: 15px;
+        padding-top: 10px;
+        font-weight: 700;
+    }
+
+    p {
+        color: $p-color;
+        text-transform: capitalize;
+    }
+
+    a {
+        padding: 15px 35px;
+        border-radius: 30px;
+        @extend %g-color;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #fff;
+        margin-top: 40px;
+        @extend %b-s;
+    }
+}
+
+.banner_imgs {
+    img {
+        width: 100%;
+        height: 550px;
+        z-index: 1;
+    }
+}
+
+/*====================================
+            Banner Part End
+======================================*/
+/*====================================
+            About Part Start
+======================================*/
+
+#about_main {
+    padding: 80px 0;
+}
+
+.about_text {
+    width: 600px;
+    margin: 0 auto;
+    padding: 40px 0;
+
+    h2 {
+        color: $t-color;
+        padding-bottom: 15px;
+        text-transform: capitalize;
+        position: relative;
+        font-weight: 700;
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 8px;
+            top: -33px;
+            width: 95px;
+            height: 65px;
+            z-index: -1;
+            background: url(../images/text_shape.png) center no-repeat;
+            background-size: cover;
+        }
+    }
+
+    p {
+        color: $p-color;
+        text-transform: capitalize;
+    }
+}
+
+.about_inner {
+    margin-top: 40px;
+    padding: 15px 15px;
+    @extend %trans;
+    height: 380px;
+    box-sizing: border-box;
+
+    &:hover {
+        @extend %s;
+        background: #fff;
+        opacity: 1;
+        transform: translateY(5%);
+        background: $bg-color;
+
+        h3 {
+            color: $br-color;
+        }
+    }
+}
+
+.about_active {
+    @extend %s;
+
+    .about_inner_text {
+        h3 {
+            color: $br-color;
+        }
+    }
+}
+
+.about_icon {
+    img {
+        margin-top: 40px;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.about_inner_text {
+    h3 {
+        color: $t-color;
+        text-transform: capitalize;
+        padding-bottom: 15px;
+        padding-top: 40px;
+    }
+
+    p {
+        color: $p-color;
+        text-transform: capitalize;
+        padding-bottom: 15px;
+    }
+
+    a {
+        padding-bottom: 30px;
+        color: $br-color;
+        text-transform: capitalize;
+        font-family: "Montserrat", sans-serif;
+
+        i {
+            font-size: 20px;
+            margin-left: 15px;
+        }
+    }
+}
+
+/*====================================
+            About Part End
+======================================*/
+/*====================================
+            Service Part Start
+======================================*/
+
+#service_main {
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+
+.service_image {
+    width: 100%;
+    height: 550px;
+}
+
+.service_text {
+    padding-left: 30px;
+    position: relative;
+
+    h2 {
+        padding-top: 120px;
+        text-transform: capitalize;
+        color: $t-color;
+        font-weight: 700;
+        padding-bottom: 30px;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: -45px;
+            bottom: 40px;
+            width: 95px;
+            height: 65px;
+            z-index: -1;
+            background: url(../images/text_shape.png) center no-repeat;
+            background-size: cover;
+        }
+    }
+
+    p {
+        color: $p-color;
+
+        span {
+            display: block;
+            padding-top: 15px;
+            padding-bottom: 40px;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: #f8f8fa;
+            top: 85px;
+            right: -350px;
+            z-index: -1;
+        }
+    }
+
+    a {
+        font-size: 16px;
+        padding: 15px 35px;
+        border-radius: 30px;
+        @extend %g-color;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-family: "Montserrat", sans-serif;
+        @extend %b-s;
+    }
+}
+
+/*====================================
+            Service Part End
+======================================*/
+/*====================================
+            Counter Part Start
+======================================*/
+
+#counter_main {
+    padding-top: 40px;
+    padding-bottom: 120px;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        position: absolute;
+        content: "";
+        right: -135px;
+        bottom: 180px;
+        width: 500px;
+        height: 390px;
+        opacity: 0.13;
+        z-index: -1;
+        background: url(../images/counter_shape.png) center no-repeat;
+        background-size: cover;
+    }
+}
+
+.counter_js {
+    position: relative;
+    padding-bottom: 7px;
+
+    .counter_active {
+        border: dashed 2px $br-color;
+        @extend %s;
+    }
+}
+
+.counter_text {
+    padding-top: 100px;
+
+    h2 {
+        font-size: 38px;
+        padding-top: 30px;
+        color: $t-color;
+        text-transform: capitalize;
+        font-weight: 800;
+        padding-bottom: 30px;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: -30px;
+            bottom: 90px;
+            width: 95px;
+            height: 65px;
+            z-index: -1;
+            background: url(../images/text_shape.png) center no-repeat;
+            background-size: cover;
+        }
+    }
+
+    p {
+        color: $p-color;
+        text-transform: capitalize;
+
+        span {
+            display: block;
+            padding-top: 15px;
+        }
+    }
+}
+
+.counter_1 {
+    position: absolute;
+    top: 60px;
+    left: 220px;
+    z-index: 1;
+
+    .counter_icon {
+        padding-top: 32px;
+        padding-left: 75px;
+    }
+
+    img {
+        width: 52px;
+        height: 52px;
+    }
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    @extend %trans;
+    background: #fff;
+    border: dashed 2px $bg-color;
+    z-index: 1;
+
+    &:hover {
+        @extend %s;
+        background: $bg-color;
+        border: 2px dashed $br-color;
+    }
+
+    .counter_content {
+        padding-top: 10px;
+        padding-left: 50px;
+
+        span {
+            font-size: 30px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            color: $br-color;
+            padding-left: 15px;
+        }
+
+        p {
+            text-transform: capitalize;
+            color: $p-color;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.counter_2 {
+    .counter_icon {
+        padding-top: 32px;
+        padding-left: 75px;
+    }
+
+    img {
+        width: 52px;
+        height: 52px;
+    }
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: dashed 2px $bg-color;
+    @extend %trans;
+    background: #fff;
+
+    &:hover {
+        @extend %s;
+        background: $bg-color;
+        border: 2px dashed $br-color;
+        @extend %s;
+    }
+
+    .counter_content {
+        padding-top: 10px;
+        padding-left: 36px;
+
+        span {
+            font-size: 30px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            color: $br-color;
+            padding-left: 25px;
+        }
+
+        p {
+            text-transform: capitalize;
+            color: $p-color;
+            text-transform: capitalize;
+        }
+    }
+}
+
+/*====================================
+            Counter Part End
+======================================*/
+/*====================================
+            Sponser Part Start
+======================================*/
+
+#sponser_main {
+    padding-bottom: 40px;
+}
+
+.sponser_text {
+    h4 {
+        padding: 40px 0;
+        color: $p-color;
+        text-transform: capitalize;
+        font-size: 22px;
+        font-weight: 700;
+    }
+}
+
+.sopnser_logo {
+    .logos {
+        img {
+            width: 150px;
+            height: 40px;
+        }
+    }
+}
+
+
+/*====================================
+            Sponser Part End
+======================================*/
+/*====================================
+            Gellary Part Start
+======================================*/
+
+#gellary_main {
+    padding: 80px 0;
+}
+
+.gellary_text {
+    h4 {
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: capitalize;
+        color: $p-color;
+        padding-top: 100px;
+        padding-bottom: 15px;
+        padding-left: 60px;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 45px;
+            height: 2px;
+            left: 0;
+            bottom: 23px;
+            background: $br-color;
+        }
+    }
+
+    h2 {
+        color: $t-color;
+        text-transform: capitalize;
+        font-weight: 800;
+        padding-bottom: 30px;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: -60px;
+            bottom: 70px;
+            width: 95px;
+            height: 65px;
+            z-index: -1;
+            background: url(../images/text_shape.png) center no-repeat;
+            background-size: cover;
+        }
+    }
+
+    p {
+        text-transform: capitalize;
+        color: $p-color;
+        width: 450px;
+    }
+}
+
+.gellary_inner {
+    display: flex;
+    margin-bottom: 15px;
+
+    .active_shape {
+        background: #febc27 !important;
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: #ffe9b7;
+            border-radius: 25px;
+            transform: rotate(10deg);
+            z-index: -1;
+        }
+    }
+
+    .gellary_cont {
+        position: relative;
+        width: 240px;
+        padding: 15px 15px;
+        background: $bg-color;
+        border-radius: 25px;
+        z-index: 1;
+        @extend %s;
+
+        .gellary_icon {
+            padding-top: 15px;
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        .gellary_cont_text {
+            h3 {
+                font-size: 18px;
+                text-transform: capitalize;
+                font-weight: 600;
+                color: $br-color;
+                padding-top: 30px;
+                padding-bottom: 15px;
+                position: relative;
+            }
+
+            p {
+                color: $p-color;
+                text-transform: capitalize;
+                padding-bottom: 40px;
+            }
+        }
+    }
+}
+
+/*====================================
+            Gellary Part End
+======================================*/
+/*====================================
+            Price Part Start
+======================================*/
+
+#price_main {
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.price_text {
+    padding-bottom: 40px;
+    width: 550px;
+    margin: 0 auto;
+
+    h2 {
+        color: $t-color;
+        text-transform: capitalize;
+        font-weight: 700;
+        padding-bottom: 30px;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 95px;
+            bottom: 45px;
+            width: 95px;
+            height: 65px;
+            z-index: -1;
+            background: url(../images/text_shape.png) center no-repeat;
+            background-size: cover;
+        }
+    }
+
+    p {
+        text-transform: capitalize;
+        color: $p-color;
+        padding-bottom: 40px;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: #f8f8fa;
+            top: -50px;
+            right: -570px;
+            z-index: -1;
+        }
+    }
+}
+
+.price_chart {
+    padding: 30px 70px;
+    @extend %trans;
+    border: 2px dashed rgb(255, 255, 255);
+
+    &:hover {
+        @extend %s;
+        background: $bg-color;
+        border: 2px dashed $br-color;
+
+        h3 {
+            color: $br-color;
+        }
+    }
+
+    img {
+        width: 75px;
+        height: 75px;
+        padding-bottom: 30px;
+    }
+
+    h3 {
+        font-size: 28px;
+        font-weight: 700;
+        color: $t-color;
+        text-transform: capitalize;
+        padding-bottom: 30px;
+    }
+
+    ul {
+        li {
+            font-size: 16px;
+            color: $p-color;
+            text-transform: capitalize;
+            padding-bottom: 15px;
+
+            i {
+                color: $br-color;
+                padding-right: 15px;
+                font-size: 10px;
+            }
+        }
+    }
+
+    a {
+        font-weight: 700;
+        font-size: 16px;
+        padding: 15px 35px;
+        border-radius: 40px;
+        @extend %g-color;
+        text-transform: uppercase;
+        color: #fff;
+        margin-top: 40px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    p {
+        font-size: 50px;
+        color: $br-color;
+        padding-top: 30px;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+
+        span {
+            font-size: 16px;
+            font-weight: 400;
+            color: $t-color;
+        }
+    }
+}
+
+.active_price {
+    @extend %s;
+    border: 2px dashed $br-color;
+
+    h3 {
+        color: $br-color;
+    }
+}
+
+
+
+/*====================================
+            Price Part End
+======================================*/
+
+/*====================================
+            Contact Part Start
+======================================*/
+
+#contact_main {
+    padding: 80px 0;
+}
+
+.contact_text {
+    padding-top: 40px;
+
+    h2 {
+        color: $t-color;
+        text-transform: capitalize;
+        padding-bottom: 30px;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: -35px;
+            bottom: 45px;
+            width: 95px;
+            height: 65px;
+            z-index: -1;
+            background: url(../images/text_shape.png) center no-repeat;
+            background-size: cover;
+        }
+    }
+
+    p {
+        color: $p-color;
+        text-transform: capitalize;
+        padding-bottom: 40px;
+    }
+}
+
+.contact_from {
+    button {
+        color: #fff;
+        font-weight: 700;
+        font-size: 16px;
+        padding: 15px 35px;
+        @extend %g-color;
+        text-transform: capitalize;
+        margin-top: 40px;
+        display: block;
+        border: none;
+        text-align: center;
+        border-radius: 30px;
+    }
+    form {
+        input {
+            padding-left: 15px;
+            font-size: 14px;
+            text-transform: capitalize;
+            font-weight: 600;
+            color: $p-color;
+            border: 0 solid $p-color;
+            width: 250px;
+            height: 45px;
+            border-radius: 23px;
+            margin-right: 15px;
+            margin-bottom: 30px;
+            @include ss;
+        }
+        input[type="email"] {
+            width: 525px;
+            border: 2px solid $br-color;
+        }
+        textarea {
+            width: 570px;
+            border-radius: 23px;
+            border: none;
+            color: $p-color;
+            padding-left: 15px;
+            text-transform: capitalize;
+            @include ss;
+        }
+    }
+   
+}
+
+/*====================================
+            Contact Part End
+======================================*/
+
+/*====================================
+            Footer Part Start
+======================================*/
+
+#footer_main {
+    padding: 80px 0;
+    background: #353535;
+}
+
+.footer_logo {
+    padding-top: 40px;
+}
+
+.footer_icon {
+    p {
+        width: 550px;
+        text-transform: capitalize;
+        color: $p-color;
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+    ul {
+        display: flex;
+        .padding_none {
+            margin: 0;
+        }
+        li {
+            margin-left: 15px;
+            a {
+                font-size: 16px;
+                text-align: center;
+                line-height: 37px;
+                color: $br-color;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: 2px solid $br-color;
+            }
+        }
+    }
+}
+.footer_map {
+    iframe {
+        width: 475px;
+    height: 345px;
+    }
+}
+
+#copy_main {
+    padding: 15px;
+    background: $br-color;
+}
+
+.copy {
+    p {
+        color: $t-color;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        
+        span {
+            padding-right: 15px;
+        }
+    }
+}
+.copy_text {
+    p {
+        padding-right: 63px;
+        font: 14px !important;
+    }
+}
+
+/*====================================
+            Footer Part End
+======================================*/
+
+/*====================================
+            Menu Part Start
+======================================*/
+/*====================================
+            Menu Part End
+======================================*/
+
+/*====================================
+            Menu Part Start
+======================================*/
+/*====================================
+            Menu Part End
+======================================*/
